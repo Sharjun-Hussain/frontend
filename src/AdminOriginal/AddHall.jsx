@@ -50,7 +50,7 @@ export const AddHall = () => {
             });
 
             
-            navigate("/admin/dashboard") 
+            navigate("/admin/dashboard/") 
        
     }
 

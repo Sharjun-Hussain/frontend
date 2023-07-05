@@ -27,7 +27,7 @@ const Registration = () => {
   const SubmitHandler = async (e) => {
     e.preventDefault();
 
-    await axios.post("http://127.0.0.1:8000/api/user/auth/signup", JSON.stringify({ FirstName, LastName, Email, Mobile, Password, Password2, HallName, Capacity, amenities }), {
+    await axios.post("/api/user/auth/signup", JSON.stringify({ FirstName, LastName, Email, Mobile, Password, Password2, HallName, Capacity, amenities }), {
       headers: {
         'Content-Type': 'application/json'
       }

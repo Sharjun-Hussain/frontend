@@ -22,7 +22,7 @@ const PopUp = (props) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const responce = await axios.get("http://127.0.0.1:8000/admin/api/halls/availablity")
+        const responce = await axios.get("/admin/api/halls/availablity")
         const jsonn = responce.data.Halls;
         setDatas(...Datas, jsonn);
 
@@ -83,7 +83,7 @@ const PopUp = (props) => {
     if (validatePhoneNumber()) {
       if (validateEmail()) {
         try {
-          await axios.post("http://127.0.0.1:8000/admin/api/booking", JSON.stringify({ Email, Name, Hall, Mobile, date }), {
+          await axios.post("/admin/api/booking", JSON.stringify({ Email, Name, Hall, Mobile, date }), {
             headers: {
               'Content-Type': 'application/json'
             }
@@ -95,7 +95,7 @@ const PopUp = (props) => {
 
           })
 
-            // return redirect("http://127.0.0.1:8000/")
+            // return redirect("/")
 
 
             .catch(error => {

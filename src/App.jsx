@@ -39,8 +39,8 @@ function App() {
 
 
           <Route exact path='/Admin/Login' element={<Login />} ></Route>
-         
-          {token ? ( <> <Route exact path='/Admin/Dashboard' element={<Dashboard />} >
+
+          {token ? (<> <Route exact path='/Admin/Dashboard' element={<Dashboard />} >
 
             <Route exact path='PendingBookings' element={<PendingBookings />} />
             <Route exact path='AcceptedBookings' element={<AcceptedBookings />} />
@@ -48,10 +48,10 @@ function App() {
             <Route exact path='Halls' element={<Halls />} />
             <Route exact path='addHall' element={<AddHall />} />
           </Route>
-         
-           <Route exact path='/admin/register' element={<Registration />}/>
-           <Route exact path='/admin/profile' element={<ProfilePage />}/>
- 
+
+            <Route exact path='/admin/register' element={<Registration />} />
+            <Route exact path='/admin/profile' element={<ProfilePage />} />
+
           </>
           ) : <Route exact path='/Admin/Login' element={<Login />} ></Route>}
 
